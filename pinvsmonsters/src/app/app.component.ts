@@ -10,17 +10,17 @@ export class AppComponent {
 
   elementos: Elemento[] = [
     {
-      icono: 'people-outline',
+      icono: '../assets/icons/pin.gif',
       nombre:'Inicio',
       ruta:'/principal',
     },
     {
-      icono: 'newspaper-outline',
+      icono: '../assets/icons/skeleton.gif',
       nombre:'Enemigos',
       ruta:'/enemigos',
     },
     {
-      icono: 'cog-outline',
+      icono: '../assets/icons/secretos.gif',
       nombre:'Secretos',
       ruta:'/secretos',
     },
