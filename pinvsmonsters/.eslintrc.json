@@ -5,10 +5,11 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json"],
+        "project": ["./tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
+        "./tsconfig.json",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
