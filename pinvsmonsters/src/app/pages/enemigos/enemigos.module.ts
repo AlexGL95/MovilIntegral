@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { EnemigosPageRoutingModule } from './enemigos-routing.module';
 
 import { EnemigosPage } from './enemigos.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnemigosPageRoutingModule
+    EnemigosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [EnemigosPage]
 })

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-center ion-text-capitalize" >{{ enemyInfo.nombre }}</ion-title>
+    <ion-title class="ion-text-center" >{{ heroeInfo.nombre }}</ion-title>
     <span slot="end" class="ion-padding-end cursor" (click)=cerrar()>X</span>
   </ion-toolbar>
 </ion-header>
@@ -8,13 +8,13 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <img class="img-banner" [src]=enemyInfo.imgBanner alt="Banner">
+        <img class="img-banner" [src]=heroeInfo.img alt="">
       </ion-col>
     </ion-row> 
     <ion-row class="ion-justify-content-center">
 
       <ion-col size="2">
-        <img class="img" [src]=enemyInfo.iconoVida>
+        <img class="img" [src]=heroeInfo.iconoVida>
       </ion-col>
       <ion-col offset="10">
       </ion-col>
@@ -28,11 +28,23 @@
         <span>Numero de vidas:</span>
       </ion-col>
       <ion-col size="3" class="border-top ion-text-center ion-padding-vertical">
-        <img class="ion-padding-end" [src]=enemyInfo.iconoVida alt="iconoVida">
-        <span class="">x{{ enemyInfo.vida }}</span>
+        <img class="ion-padding-end" [src]=heroeInfo.iconoVida alt="gif pin">
+        <span class="">x{{ heroeInfo.vida }}</span>
       </ion-col>
 
       <!--    Fin Vidas    -->
+
+      <!--    Inicio Salto    -->
+
+      <ion-col size="7" class="border-top ion-padding-vertical">
+        <span>Salto:</span>
+      </ion-col>
+      <ion-col size="3" class="border-top ion-text-center ion-padding-vertical">
+        <img class="ion-padding-end" [src]=heroeInfo.iconoSalto alt="gif pin">
+        <span>{{ heroeInfo.salto }}</span>
+      </ion-col>
+
+      <!--    Fin Salto    -->
 
       <!--    Inicio Velocidad   -->
 
@@ -40,8 +52,8 @@
         <span>Velocidad:</span>
       </ion-col>
       <ion-col size="3" class="border-top ion-text-center ion-padding-vertical">
-        <img class="ion-padding-end" [src]=enemyInfo.iconoVelocidad alt="iconoVelocidad">
-        <span>{{ enemyInfo.velocidad }}</span>
+        <img class="ion-padding-end" [src]=heroeInfo.iconoVelocidad alt="gif pin">
+        <span>{{ heroeInfo.velocidad }}</span>
       </ion-col>
       
       <!--    Fin Velocidad    -->
@@ -52,15 +64,15 @@
         <span>Daño:</span>
       </ion-col>
       <ion-col size="3" class="border-top ion-text-center ion-padding-vertical">
-        <img class="ion-padding-end" [src]=enemyInfo.iconoDanno alt="iconoDanno">
-        <span>{{ enemyInfo.danno }}</span>
+        <img class="ion-padding-end" [src]=heroeInfo.iconoDanno alt="pinStone">
+        <span>{{ heroeInfo.danno }}</span>
       </ion-col>
 
        <!--    Fin Danno   -->
 
       <ion-col size="10" class="border-top ion-text-justify ion-padding-vertical">
         <p>
-          {{ enemyInfo.curiosidades }}
+          {{ heroeInfo.curiosidades }}
         </p>
       </ion-col>
 
