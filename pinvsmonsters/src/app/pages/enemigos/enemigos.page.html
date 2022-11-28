@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Enemigos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title='Enemigos'></app-header>
 
 <ion-content>
-
-</ion-content>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="bord" size="10" sizeSm="8" sizeMd="6" sizeLg="4" *ngFor="let enemy of enemies; let i=index;">
+        <ion-card >
+          <img style="width: 100%;" alt="Pin vs Monsters Banner" [src]=enemy.imgBanner />
+          <ion-card-header>
+            <ion-card-title class="ion-text-capitalize">{{enemy.nombre}}
+            </ion-card-title>
+            <ion-card-subtitle>Descripción</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{enemy.descripcion}}
+          </ion-card-content>
+  
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="12" class="ion-text-center">
+              <ion-button (click)= verDetalleEnemy(i) >
+                Más sobre {{ enemy.nombre }}
+              </ion-button>
+            </ion-col>
+          </ion-row>
+  
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-content>
