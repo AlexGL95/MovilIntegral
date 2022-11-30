@@ -49,7 +49,7 @@ export class ModalHeroeComponent implements OnInit {
           this.heroeInfo = infoHeroe;
         },
         error:
-        (errorR: HttpErrorResponse) =>{
+        (errorR: HttpErrorResponse) => {
           if (errorR.status == 0) {
             this.noInternetModal();
           }

@@ -24,3 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.cursor{
+    cursor: pointer;
+}
+
+.img{
+    width: 300%;
+}
+
+.img-banner{
+    border-radius: 20px 20px 20px 20px;
+    border: solid gray;
+}
+
+.border-top{
+    border-top: solid gray;
+}
