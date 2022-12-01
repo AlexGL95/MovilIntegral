@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Platforms/Mountain/LCorner.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Platforms/Mountain/RCorner.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Platforms/Mountain/RightSide.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Platforms/Mountain/leftSide.png" type="Texture" id=4]
+
+[sub_resource type="Curve2D" id=1]
+bake_interval = 0.01
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, -12, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 29 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "PlatformV"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 50.6987 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.99 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KinematicBody2D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -8, -8 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 7, -8 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 7, 7 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -8, 7 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( -8, 22 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 7, 22 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( -16, -12, -12, -16, 11, -16, 14, -13, 14, 29, -15, 29 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 0, -12 )
+rotate = false
+cubic_interp = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+remote_path = NodePath("../../../KinematicBody2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/PlatformV = SubResource( 2 )
+anims/RESET = SubResource( 3 )

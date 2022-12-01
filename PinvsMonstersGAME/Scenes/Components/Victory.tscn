@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Fonts/04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/heroe/mHero_16.png" type="Texture" id=2]
+[ext_resource path="res://Assets/heroe/mHero_11.png" type="Texture" id=3]
+[ext_resource path="res://Assets/heroe/mHero_3.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Components/Victory.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Backgrounds/Mountain and forest/country-platform-back.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Backgrounds/Mountain and forest/country-platform-tiles-example.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Happy",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+show_behind_parent = true
+margin_right = 1024.0
+margin_bottom = 602.0
+script = ExtResource( 5 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1541.0
+margin_bottom = 896.0
+texture = ExtResource( 6 )
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_top = -91.0
+margin_right = 1582.0
+margin_bottom = 898.0
+texture = ExtResource( 7 )
+stretch_mode = 1
+
+[node name="Ttle" type="Label" parent="."]
+margin_left = 299.0
+margin_top = 93.0
+margin_right = 1337.0
+margin_bottom = 178.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.337255, 0.545098, 0.470588, 1 )
+custom_colors/font_color_shadow = Color( 0.164706, 0.784314, 0.117647, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Enhorabuena!!
+Completaste el nivel!"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 213.0
+margin_top = 576.0
+margin_right = 569.0
+margin_bottom = 659.0
+theme = SubResource( 4 )
+
+[node name="TextButton" type="Label" parent="Button"]
+margin_left = 56.0
+margin_top = 31.0
+margin_right = 296.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 2 )
+text = "Volver a Jugar!"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1384, 708 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 3 )
+animation = "Happy"
+frame = 3
+playing = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
