@@ -11,14 +11,6 @@ const routes: Routes = [
     component:PrincipalComponent
   },
   {
-    path:'enemigos',
-    component:EnemigosComponent
-  },
-  {
-    path:'descargar',
-    component:DescargarComponent
-  },
-  {
     path:'**',
     redirectTo:'inicio',
   }
