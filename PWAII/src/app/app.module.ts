@@ -9,13 +9,15 @@ import { EnemigosComponent } from './pages/enemigos/enemigos.component';
 import { DescargarComponent } from './pages/descargar/descargar.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CacheInterceptor } from './cache/cacheInterceptor.class';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     EnemigosComponent,
-    DescargarComponent
+    DescargarComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DescargarComponent } from './pages/descargar/descargar.component';
 import { EnemigosComponent } from './pages/enemigos/enemigos.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 const routes: Routes = [
   {
     path:'inicio',
-    component:InicioComponent
+    component:PrincipalComponent
   },
   {
     path:'enemigos',
