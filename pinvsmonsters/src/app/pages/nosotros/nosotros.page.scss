@@ -1,14 +1,4 @@
-/* iOS places the subtitle above the title */
-ion-card-header.ios {
-    display: flex;
-    flex-flow: column-reverse;
-  }
-
-  .custom-Button{
-    background-color: #006400;
-    color: black;
-  }
-  .borde{
+.borde{
     border-radius: 90px 90px 90px 90px;
     border: 2px solid rgb(0, 99, 0);
 }

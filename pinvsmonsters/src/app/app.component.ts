@@ -24,6 +24,11 @@ export class AppComponent {
       nombre:'Secretos',
       ruta:'/secretos',
     },
+    {
+      icono: '../assets/icons/nosotros.png',
+      nombre:'Nosotros',
+      ruta:'/nosotros',
+    },
 ];
 
   constructor() {}

@@ -8,9 +8,18 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">
+         Vive junto con pin la aventura en el cerro Blue.
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
   <ion-row class="ion-justify-content-center">
     <ion-col class="bord" size="10" sizeSm="8" sizeMd="6" sizeLg="4">
-      <ion-card>
+      <ion-card class="bordeCard">
         <img style="width: 100%;" alt="Pin vs Monsters Banner" src="../../../assets/img/Inicio.png" />
         <ion-card-header>
           <ion-card-title>Pin vs Monsters
@@ -19,17 +28,31 @@
         </ion-card-header>
       
         <ion-card-content>
-          Pin, nuestro héroe, tratará de sobrevivir en un paraje lleno de monstruos aterradores dispuestos a todo para acabar con él...
+          Un día normal, como cualquier otro Pin, se encontraba explorando el cerro Blue, cuando de pronto vio a lo lejos algo extraño parecía ser un esqueleto moviéndose!.
+          
+          <ion-row class="ion-justify-content-center ion-margin-top">
+            <ion-col size="11" class="ion-text-center">
+              <ion-button (click)=verDetalleHeroe()>
+                Más sobre Pin
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          
+          <ion-card-subtitle class="ion-margin-top">
+            <ion-row class="ion-justify-content-center ion-margin-top">
+              <ion-col size="10">
+                Pin supo en ese momento que debía enfrentarse a las adversidades para poder regresar a casa a tiempo para cenar o su madre Comochi lo haría sufrir como aquel día que no logro titularse.
+              </ion-col>
+              <ion-col size="2" style="margin-top: auto ; margin-bottom: auto ;" class="ion-text-center">
+                <img style="width: 100% ;" src="../../../assets/img/sadHero.png" alt="">
+              </ion-col>
+            </ion-row>
+            
+          </ion-card-subtitle>
+          <ion-card-subtitle class="ion-margin-top">
+            Ayuda a Pin en su aventura enfrentando los más peligrosos retos y aventurándote con él en los más profundos abismos del cerro Blue.
+          </ion-card-subtitle>
         </ion-card-content>
-
-        <ion-row class="ion-justify-content-center">
-          <ion-col size="11" class="ion-text-center">
-            <ion-button (click)=verDetalleHeroe()>
-              Más sobre Pin
-            </ion-button>
-          </ion-col>
-        </ion-row>
-
       </ion-card>
     </ion-col>
   </ion-row>

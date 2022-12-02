@@ -3,7 +3,7 @@
 <ion-content>
     <ion-row class="ion-justify-content-center">
       <ion-col class="bord" size="10" sizeSm="8" sizeMd="6" sizeLg="4" *ngFor="let enemy of enemies; let i=index;">
-        <ion-card >
+        <ion-card class="bordeCard">
           <img style="width: 100%;" alt="Pin vs Monsters Banner" [src]=enemy.imgBanner />
           <ion-card-header>
             <ion-card-title class="ion-text-capitalize">{{enemy.nombre}}

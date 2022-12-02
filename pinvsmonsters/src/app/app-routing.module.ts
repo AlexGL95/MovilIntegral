@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'secretos',
     loadChildren: () => import('./pages/secretos/secretos.module').then( m => m.SecretosPageModule)
   },
+  {
+    path: 'nosotros',
+    loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+  },
 ];
 
 @NgModule({

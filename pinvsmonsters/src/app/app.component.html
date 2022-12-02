@@ -11,7 +11,7 @@
         <ion-menu-toggle autoHide="true">
           <ion-item *ngFor="let item of elementos "
           [routerLink]="item.ruta" detail>
-            <img class="ion-padding-end" [src]=item.icono>
+            <img class="ion-padding-end" style="width:15% ;" [src]=item.icono>
               {{ item.nombre }}
             </ion-item>
         </ion-menu-toggle>
