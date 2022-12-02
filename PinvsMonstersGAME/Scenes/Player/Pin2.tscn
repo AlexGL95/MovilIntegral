@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/heroe/mHero_15.png" type="Texture" id=1]
 [ext_resource path="res://Assets/heroe/mHero_17.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Assets/heroe/mHero_2.png" type="Texture" id=14]
 [ext_resource path="res://Assets/heroe/mHero_26.png" type="Texture" id=15]
 [ext_resource path="res://Pin.gd" type="Script" id=16]
+[ext_resource path="res://Assets/music/hurt.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Assets/music/salto.mp3" type="AudioStream" id=19]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -66,3 +68,11 @@ playing = true
 
 [node name="pinCollition" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[node name="hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -5.0
+
+[node name="soundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -20.0

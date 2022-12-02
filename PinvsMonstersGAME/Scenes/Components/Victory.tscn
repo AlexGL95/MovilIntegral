@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Fonts/04B_30__.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/heroe/mHero_16.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Components/Victory.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Backgrounds/Mountain and forest/country-platform-back.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Backgrounds/Mountain and forest/country-platform-tiles-example.png" type="Texture" id=7]
+[ext_resource path="res://Assets/music/victoria.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -78,7 +79,9 @@ position = Vector2( 1384, 708 )
 scale = Vector2( 6, 6 )
 frames = SubResource( 3 )
 animation = "Happy"
-frame = 3
 playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/el_grito_wilhelm.mp3-ffb5ad4173bd83b76385509d7e0b482a.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/el_grito_wilhelm.mp3"
+dest_files=[ "res://.import/el_grito_wilhelm.mp3-ffb5ad4173bd83b76385509d7e0b482a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

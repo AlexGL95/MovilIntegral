@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Super mario Bros. (el salto de mario) _ Efecto de sonido.mp3-69a5db7277046f32bc864ac78465ffba.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/Super mario Bros. (el salto de mario) _ Efecto de sonido.mp3"
+dest_files=[ "res://.import/Super mario Bros. (el salto de mario) _ Efecto de sonido.mp3-69a5db7277046f32bc864ac78465ffba.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

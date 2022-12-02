@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/salto.mp3-101e5d54f6ae509dee78fa8f61525c02.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/salto.mp3"
+dest_files=[ "res://.import/salto.mp3-101e5d54f6ae509dee78fa8f61525c02.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

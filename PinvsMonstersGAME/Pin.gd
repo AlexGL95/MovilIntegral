@@ -11,6 +11,8 @@ var hurt = false
 var hurtingTime = .3
 
 onready var pinSprite = get_node("pinSprite")
+onready var jumpsound = $soundJump
+onready var hurtSound = get_node("hurt")
 
 func _physics_process(delta):
 	
@@ -33,10 +35,11 @@ func _physics_process(delta):
 	
 	if (Input.is_action_just_pressed("jump")and is_on_floor() && !hurt):
 		velocity.y=JUMPFORCE
+		jumpsound.play()
+		pinSprite.play("Jump")
 		jumping=false
 		
 	if !is_on_floor() && !hurt:
-		pinSprite.play("Jump")
 		jumping=true
 	
 	velocity.y = velocity.y + GRAVITY
@@ -62,11 +65,12 @@ func _physics_process(delta):
 	if(get_slide_collision(get_slide_count()-1)):
 		var objCollide = get_slide_collision(get_slide_count()-1).collider
 		if (objCollide.is_in_group("Damage")):
-			_hurt(0)
+			_hurt(-1)
 		else:
 			hurt = false
 func _bounce():
 	velocity.y = JUMPFORCE * 0.5
+	hurtSound.play()
 	
 func _hurt(var extraHurt):
 		hurt = true
@@ -82,6 +86,7 @@ func _hurt(var extraHurt):
 		LiveCounter.lives -= (1 + extraHurt)
 		print(LiveCounter.lives)
 		if LiveCounter.lives <= 0:
+			yield(get_tree().create_timer(.5),"timeout")
 			get_tree().change_scene("res://Scenes/Components/gameover.tscn")
 			
 func _hit_reaction():
